@@ -1,0 +1,116 @@
+<div class="content-wrapper">
+  <section class="content-header main-header-banner">
+    <h1>Add Booking</h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box box-primary">
+          <form class="add-restaurant-form" role="form">
+            <fieldset>
+              <legend><i class="fa fa-user fa-icon" aria-hidden="true"></i>Basic Information</legend>
+              <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Enter the First name">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter the Last name">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="Enter the email address">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" placeholder=" Enter the phone number">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Date of Birth</label>
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="dateOfBirth">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><i class="fa fa-address-book" aria-hidden="true"></i>Address Information</legend>
+              <div class="form-group col-md-6">
+                <label>Address Line 1</label>
+                <input type="text" class="form-control" placeholder="Enter the address">
+              </div>
+              <div class="form-group col-md-6">
+                <label>City</label>
+                <input type="text" class="form-control" placeholder="Enter the city">
+              </div>
+              <div class="form-group col-md-6">
+                <label>State</label>
+                <input type="text" class="form-control" placeholder="Enter the state">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Country</label>
+                <input type="text" class="form-control" placeholder=" Enter the country">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Postcode</label>
+                <input type="text" class="form-control" placeholder=" Enter the postcode">
+              </div>
+            </fieldset>
+            <fieldset class="booking-type">
+              <legend><i class="fa fa-bandcamp" aria-hidden="true"></i>Booking Shift</legend>
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="booking_type" class="square">
+                    Breakfast
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="booking_type" class="square">
+                    Lunch
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="booking_type" class="square">
+                    Dinner
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><i class="fa fa-plus-circle" aria-hidden="true"></i>Other Information</legend>
+              <div class="form-group col-md-6">
+                <label>No. of pax</label>
+                <input type="number" class="form-control" placeholder="No. of seats">
+              </div>
+              <div class="form-group">
+                <label>Timing</label>
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="bookingTiming">
+                </div>
+              </div>
+            </fieldset>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" ui-sref="bookings" class="btn btn-default">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+</div>

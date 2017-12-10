@@ -1,0 +1,39 @@
+<div class="content-wrapper manage-page">
+  <section class="content-header main-header-banner">
+    <h1>Manage</h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Custom Tabs -->
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="!#brands" data-toggle="tab">Brands</a></li>
+            <li><a href="!#categories" data-toggle="tab">Categories</a></li>
+            <li><a href="!#sub-categories" data-toggle="tab">Attributes</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="brands">
+              <div ng-include="'app/templates/manage/brands.html'"></div>
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="categories">
+              <div ng-include="'app/templates/manage/categories.html'"></div>
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="sub-categories">
+              <div ng-include="'app/templates/manage/attributes.html'"></div>
+            </div>
+            <!-- /.tab-pane -->
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+</div>

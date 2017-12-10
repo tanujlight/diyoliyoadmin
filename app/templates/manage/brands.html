@@ -1,0 +1,65 @@
+<div ng-controller="brands">
+	<div class="box data-list-box">
+		<div class="add-button" ng-click="addEditBrand('add')">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</div>
+		<!-- /.box-header -->
+		<div class="box-body list-table">
+			<table id="brandList" class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Brand Name</th>
+						<th>Description</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in dummyData">
+						<td>{{$index +1 }}</td>
+						<td>Sony</td>
+						<td>This is the electronic brand.</td>
+						<td>
+							<div layout="row">
+								<a ng-click="addEditBrand($index)" data-toggle="tooltip" title="Edit Brand!" data-placement="bottom" class="datatable-action">
+									<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+								</a>
+								<a href="javascript:;" data-toggle="confirmation" title="Remove Brand" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+									<i class="fa fa-trash-o" aria-hidden="true"></i>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- /.box-body -->
+	</div>
+
+	<div class="modal fade" tabindex="-1" id="addEditBrand" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">{{ brandModalTitle }}</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label>Brand Name</label>
+							<input type="text" class="form-control" ng-model="brand.name" placeholder="Enter name"/>
+						</div>
+						<div class="form-group">
+							<label>Description</label>
+							<textarea class="form-control" ng-model="brand.description" placeholder="Enter Description"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" ng-click="addUpdateBrand()" class="btn btn-primary">{{ addUpdateSubmitButton }}</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>

@@ -1,0 +1,558 @@
+body {
+	font-family: 'open_sansregular', helvetica, sans-serif;
+	/*line-height: 28px;*/
+	font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'open_sansregular', helvetica, sans-serif;
+}
+
+table tr td {
+	vertical-align: middle !important;
+}
+
+table tr th {
+	font-size: 16px;
+}
+
+textarea.form-control {
+	resize: none;
+}
+
+a {
+	cursor: pointer !important;
+}
+/* ======================== common pages css ========================== */
+
+.authentication-page {
+	height: 100vh;
+	position: relative;
+	background: url('../img/common/login-bg.svg') no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.authentication-page .overlay {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 0px;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+/* authetication page css */
+.authentication-page .authentication-box {
+	margin: 0 auto;
+	padding: 7% 0;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+
+.authentication-page .authentication-box form button {
+	background: #3c5a99;
+	border-color: #3c5a99;
+	width: auto;
+	min-width: 100px;
+	padding: 10px;
+}
+
+.authentication-page .authentication-box form button:hover {
+	background: #325296;
+}
+
+.authentication-page .authentication-box .other-link {
+	margin-top: 15px;
+}
+/* authetication page css */
+
+
+/* header css */
+.header-page .logo {
+	font-size: 17px;
+}
+.header-page .navbar-nav>.user-menu>.dropdown-menu {
+	width: auto;
+}
+.header-page .dropdown-menu li a {
+	padding: 10px 20px;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #3c5a99;
+}
+
+.skin-blue .main-header .logo:hover {
+    background-color: #325296;
+}
+
+.skin-blue .main-header .navbar {
+	background-color: #3c5a99;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #325296;
+}
+
+.box.box-primary {
+    border-top-color: #3c5a99;
+}
+
+.main-header .sidebar-toggle {
+	padding: 10px 15px;
+}
+
+/* header media quires */
+@media (max-width: 991px) {
+	.header-page .navbar-custom-menu>.navbar-nav>li>.dropdown-menu {
+	     right: 0px; 
+	}
+}
+
+@media (max-width: 767px) {
+
+	.skin-blue .main-header .navbar .dropdown-menu li a {
+		color: #333;
+	}
+	.skin-blue .main-header .navbar .dropdown-menu li a:hover {
+		color: #fff;
+	}
+}
+/* header css */
+
+/* sidebar css */
+.skin-blue .sidebar-menu>li.active>a {
+	border-left-color: #3c5a99;
+}
+
+/* sidebar css end*/
+
+.main-header-banner {
+    background: url(../img/common/main-header-banner.jpg) no-repeat scroll center !important;
+    color: #fff;
+    margin: 15px 15px 0;
+    overflow: hidden;
+    padding: 20px 25px;
+    font-size: 22px;
+}
+
+.main-header-banner h1 {
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+.data-list-box {
+	position: relative;
+}
+
+.add-button {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+    padding: 5px 15px;
+    font-size: 25px;
+    background: #3c5a99;
+    color: #fff;
+}
+
+.add-button:hover {
+	background: #325296;
+}
+
+/* ======================== end common pages css ======================= */
+
+
+
+/* ======================  admin pannel css ============================ */
+
+/* restaurant-list */
+
+.list-table {
+	padding-top: 60px;
+}
+
+.list-table .datatable-action {
+	color: inherit;
+	padding-right: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 17px;
+}
+
+.list-table .restaurant-status {
+	display: inline-block;
+	vertical-align: middle;
+    margin: 1px 10px 0 0;
+}
+
+.list-table .restaurant-status .switch {
+	position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 18px;
+    margin: 0px;
+
+}
+
+.list-table .restaurant-status .switch input {
+	display: none;
+}
+.list-table .restaurant-status {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 14px;
+}
+.list-table .restaurant-status .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 32px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.list-table .restaurant-status .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.list-table .restaurant-status input:checked + .slider {
+  background-color: #3c5a99;
+}
+
+.list-table .restaurant-status input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/* add restaurant form */
+.add-restaurant-container {
+	position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #3c5a99;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.add-restaurant-form {
+	padding: 20px;
+}
+
+.add-restaurant-form fieldset {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.add-restaurant-form fieldset legend {
+	background-color: #ddd;
+    margin-bottom: 5px;
+    padding: 6px 12px;
+    width: auto;
+    font-size: 16px;
+    border: 0px;
+}
+
+.add-restaurant-form fieldset legend i {
+	margin-right: 5px;
+}
+
+.add-restaurant-form fieldset .checkbox {
+	display: inline-block;
+	margin: 10px;
+}
+
+.add-restaurant-form fieldset .box.box-default {
+	border: 1px solid #d2d6de;
+}
+
+.add-restaurant-form fieldset .add-more-button {
+	padding: 5px 15px;
+    font-size: 18px;
+    background: #3c5a99;
+    color: #fff;
+}
+
+/* assing users page css */
+.assign-users-form .assign-user-actions {
+	background: #2e323e;
+	padding: 5px 10px;
+	margin: 0 15px 10px;
+}
+
+.assign-users-form .search-field input {
+	height: 30px;
+}
+.assign-users-form label.green {
+	color: green;
+}
+
+.assign-users-form label.red {
+	color: red;
+}
+
+.icheckbox_square-blue, .iradio_square-red {
+	width: 23px;
+	height: 23px;
+}
+
+.icheckbox_square-red, .iradio_square-red {
+	width: 23px;
+	height: 23px;
+}
+
+/* ======================  end admin pannel css ======================== */
+
+
+
+/* ======================  restaurant pannel css ======================= */
+
+.top-header {
+	background: #2d323e;
+    margin: 0px 15px;
+    padding: 5px 10px;
+}
+
+.top-header .datetimepicker-container {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+.top-header .datetimepicker-container label {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff !important;
+}
+
+.top-header .print-button {
+	width: 100px;
+	float: right;
+}
+
+.top-header .print-button button {
+	padding: 7px;
+}
+
+.top-header .bookings-filter {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px 0 10px;
+}
+
+@media only screen and (max-width: 991px) {
+	.top-header .bookings-filter {
+		margin-left: 0px;
+	}
+}
+
+.top-header .bookings-filter label {
+	padding: 7px 15px;
+	width: auto;
+}
+
+.top-header .refresh-button {
+	width: 120px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.top-header .refresh-button button {
+	padding: 7px 30px;
+	width: auto;
+}
+
+fieldset.booking-type .radio {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#bookings-list .datatable-action {
+	color: inherit;
+	padding-right: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 20px;
+}
+
+.assign-table-booking-page, .assign-users-to-restaurant {
+	padding-top: 0px;
+}
+
+
+/* ======================  end restaurant pannel css =================== */
+
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background-color: #3c5a99;
+	border-color: #3c5a99;
+}
+
+.btn-primary {
+    background-color: #3c5a99;
+    border-color: #3c5a99;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary.hover, .btn-primary:focus, .btn-primary.active, .btn-primary.active:hover, .btn-primary.active:focus {
+	background-color: #325296;
+    border-color: #325296;
+    outline: none;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+	background-color: #325296;
+    border-color: #325296;
+    outline: none;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active {
+    border-top-color: #3c5a99;
+}
+
+.glyphicon {
+	vertical-align: middle;
+	top: 0px;
+}
+
+fieldset label {
+	font-size: 14px;
+}
+
+fieldset .form-group {
+	margin-bottom: 10px;
+}
+
+fieldset input {
+	font-family: 'open_sanslight', helvetica, sans-serif;
+}
+
+fieldset select {
+	font-family: 'open_sanslight', helvetica, sans-serif;
+}
+
+.confirmation-buttons a.btn {
+	padding: 7px 20px;
+}
+
+.datatable-action.remove-icon {
+	color: #cb222d !important;
+}
+
+.datatable-action.remove-icon:hover {
+	opacity: 0.8;
+}
+
+.manage-page .add-sub-category {
+	position: absolute;
+    top: 0px;
+    right: 70px;
+    z-index: 2;
+}
+
+.manage-page .add-sub-category button {
+	padding: 8px 12px;
+	width: auto;
+	border-radius: 0px;
+}
+
+.manage-page .sub-categories-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.manage-page .sub-categories-list li {
+	display: inline-block;
+	list-style: none;
+	margin: 5px;
+}
+
+.manage-page .sub-categories-list li button {
+	font-size: 11px;
+	padding: 6px 10px;
+	width: auto;
+}
+
+.manage-page .attribute-values-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.manage-page .attribute-values-list li {
+	display: inline-block;
+	list-style: none;
+}
+
+.product-image {
+	position: relative;
+    width: 120px;
+    height: 100px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.product-image span.plus-icon {
+	position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0px;
+    color: #bdbdbd;
+    padding: 18px 0;
+    font-size: 45px;
+    bottom: 0px;
+    background: #fff;
+    z-index: 0;
+}
+
+.product-image input[type="file"] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}

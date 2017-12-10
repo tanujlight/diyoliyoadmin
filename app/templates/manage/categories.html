@@ -1,0 +1,108 @@
+<div ng-controller="categories">
+	<div class="box data-list-box">
+		<div class="add-button" ng-click="addEditCategory('add')">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</div>
+		<div class="add-sub-category">
+			<button type="button" ng-click="addEditSubCategory('add')" class="btn btn-block btn-primary">Add Sub Categroy</button>
+		</div>
+		<!-- /.box-header -->
+		<div class="box-body list-table">
+			<table id="categoryList" class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Category</th>
+						<th>Sub Categories</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in dummyData">
+						<td>{{$index +1 }}</td>
+						<td>Mens</td>
+						<td>
+							<ul class="sub-categories-list">
+								<li ng-repeat="y in dummyData">
+									<button type="button" ng-click="addEditSubCategory($index)" class="btn btn-block btn-default">Sub Category</button>
+								</li>
+								<li ng-repeat="y in dummyData">
+									<button type="button" ng-click="addEditSubCategory($index)" class="btn btn-block btn-default">Sub Category askdfklajsld</button>
+								</li>
+							</ul>
+						</td>
+						<td>
+							<div layout="row">
+								<a ng-click="addEditCategory($index)" data-toggle="tooltip" title="Edit Category!" data-placement="bottom" class="datatable-action">
+									<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+								</a>
+								<a href="javascript:;" data-toggle="confirmation" title="Remove Category" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+									<i class="fa fa-trash-o" aria-hidden="true"></i>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- /.box-body -->
+	</div>
+
+	<div class="modal fade" tabindex="-1" id="addEditCategory" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">{{ categoryModalTitle }}</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label>Category Name</label>
+							<input type="text" class="form-control" ng-model="category.name" placeholder="Enter name"/>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" ng-click="addUpdateCategory()" class="btn btn-primary">{{ addUpdateSubmitButton }}</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- sub category modal -->
+	<div class="modal fade" tabindex="-1" id="addEditSubCategory" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">{{ SubCategoryModalTitle }}</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label>Select Category</label>
+							<select class="form-control" ng-model="subCategory.category">
+								<option>option 1</option>
+								<option>option 2</option>
+								<option>option 3</option>
+								<option>option 4</option>
+								<option>option 5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Sub Category Name</label>
+							<input type="text" class="form-control" ng-model="subCategory.name" placeholder="Enter name"/>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" ng-click="addUpdateSubCategory()" class="btn btn-primary">{{ addUpdateSubmitButton }}</button>
+					<button ng-if="updateSubCategory == true" type="button" ng-click="addUpdateSubCategory()" class="btn btn-danger">Delete Sub Category</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>

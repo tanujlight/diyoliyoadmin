@@ -1,0 +1,124 @@
+<div class="content-wrapper">
+  <section class="content-header main-header-banner">
+    <h1>Welcome Mango Tree</h1>
+  </section>
+  <div class="top-header">
+    <div class="datetimepicker-container col-md-3">
+      <div class="form-group">
+        <div class="input-group date">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input type="text" class="form-control" id="datetimepicker">
+        </div>
+      </div>
+    </div>
+    <div class="bookings-filter">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="booking" autocomplete="off" checked> Day
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="booking" autocomplete="off"> Breakfast
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="booking" autocomplete="off"> Lunch
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="booking" autocomplete="off"> Dinner
+        </label>
+      </div>
+    </div>
+    <div class="refresh-button">
+      <button type="button" class="btn btn-block btn-success">Refresh</button>
+    </div>
+    <div class="print-button">
+      <button type="button" class="btn btn-block btn-primary">Print</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <section class="content bookings-list">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box data-list-box">
+          <div class="box-body">
+            <table id="bookings-list" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Booking Shift</th>
+                <th>Reservation Time</th>
+                <th>Mobile</th>
+                <th>No. of Pax</th>
+                <th>Table Number</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="x in dummyData">
+                <td>Tanuj</td>
+                <td>Lunch</td>
+                <td>20/10/2017 13:00</td>
+                <td>8929540002</td>
+                <td>2</td>
+                <td>2</td>
+                <td>
+                  <div layout="row">
+                    <a ui-sref="add-booking" data-toggle="tooltip" title="Edit Booking!" data-placement="bottom" class="datatable-action">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    <a href="javascript:;" data-toggle="confirmation" title="Remove Booking" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr ng-repeat="x in dummyData">
+                <td>Ishan</td>
+                <td>Breakfast</td>
+                <td>19/10/2017 9:00</td>
+                <td>8978921463</td>
+                <td>4</td>
+                <td>5</td>
+                <td>
+                  <div layout="row">
+                    <a ui-sref="add-booking" data-toggle="tooltip" title="Edit Booking!" data-placement="bottom" class="datatable-action">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    <a href="javascript:;" data-toggle="confirmation" title="Remove Booking" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr ng-repeat="x in dummyData">
+                <td>Rakesh</td>
+                <td>Dinner</td>
+                <td>22/10/2017 20:00</td>
+                <td>8756134568</td>
+                <td>3</td>
+                <td>6</td>
+                <td>
+                  <div layout="row">
+                    <a ui-sref="add-booking" data-toggle="tooltip" title="Edit Booking!" data-placement="bottom" class="datatable-action">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    <a href="javascript:;" data-toggle="confirmation" title="Remove Booking" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+</div>

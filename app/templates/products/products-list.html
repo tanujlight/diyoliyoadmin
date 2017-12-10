@@ -1,0 +1,51 @@
+<div class="content-wrapper manage-page">
+	<section class="content-header main-header-banner">
+		<h1>Products</h1>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box data-list-box">
+					<div class="add-button" ui-sref="add-product">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body list-table">
+						<table id="productList" class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>Product Name</th>
+									<th>Category</th>
+									<th>Sub Category</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="x in dummyData">
+									<td>T-shirt</td>
+									<td>Men</td>
+									<td>Sub Category</td>
+									<td>
+										<div layout="row">
+											<a ng-click="addEditProduct($index)" data-toggle="tooltip" title="Edit Product!" data-placement="bottom" class="datatable-action">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
+											<a href="javascript:;" data-toggle="confirmation" title="Remove Product" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.box-body -->
+				</div>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+</div>
