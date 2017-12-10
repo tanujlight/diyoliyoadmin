@@ -1,0 +1,196 @@
+<div class="content-wrapper add-order-page">
+  <section class="content-header main-header-banner">
+    <h1>{{ addEditPageTitle }}</h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box box-primary">
+          <form class="add-restaurant-form" role="form">
+            <fieldset>
+              <legend><i class="fa fa-user fa-icon" aria-hidden="true"></i>Order Information</legend>
+              <div class="form-group col-md-6">
+                <label>Date</label>
+                <input type="text" disabled class="form-control" value="10/12/2017">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Customer</label>
+                <select class="form-control">
+                  <option>Select</option>
+                  <option>option 1</option>
+                  <option>option 2</option>
+                  <option>option 3</option>
+                  <option>option 4</option>
+                  <option>option 5</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Shipping Method</label>
+                <input type="email" disabled class="form-control" value="DiyoLiyo">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Order Status</label>
+                <select class="form-control">
+                  <option>Pending</option>
+                  <option>Shipped</option>
+                  <option>Delieverd</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><i class="fa fa-address-book" aria-hidden="true"></i>Billing Information</legend>
+              <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" ng-model="customer.firstName" placeholder="Enter the first name">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" ng-model="customer.lastName" placeholder="Enter the last name">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Email Address</label>
+                <input type="email" class="form-control" ng-model="customer.email" placeholder="Enter the email address">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" ng-model="customer.phone" placeholder="Enter the phone number">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Address</label>
+                <input type="text" class="form-control" ng-model="customer.address" placeholder="Enter the address">
+              </div>
+              <div class="form-group col-md-6">
+                <label>City</label>
+                <input type="text" class="form-control" ng-model="customer.city" placeholder="Enter the city">
+              </div>
+              <div class="form-group col-md-6">
+                <label>State</label>
+                <input type="text" class="form-control" ng-model="customer.state" placeholder="Enter the state">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Country</label>
+                <input type="text" class="form-control" ng-model="customer.country" placeholder="Enter the country">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Postcode</label>
+                <input type="text" class="form-control" ng-model="customer.postcode" placeholder="Enter the postcode">
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><i class="fa fa-user fa-icon" aria-hidden="true"></i>Order Details</legend>
+              <div class="table-responsive">
+                <table class="table table-striped table-bordered table-condensed">
+                  <tr>
+                    <th>Sr.No.</th>
+                    <th>Item</th>
+                    <th>Attribute</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                    <th>Shipping Charges</th>
+                    <th>Total Amount</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>DELISH 2500</td>
+                    <td>Standard</td>
+                    <td>5</td>
+                    <td>500</td>
+                    <td>2500</td>
+                    <td>200</td>
+                    <td>2700</td>
+                    <td>
+                      <div layout="row">
+                        <a ui-sref="add-edit-customer({customerId: $index })" data-toggle="tooltip" title="Edit Item!" data-placement="bottom" class="datatable-action">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:;" data-toggle="confirmation" title="Remove Item" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-12 billing-amount">
+                <div>
+                  <label>Bill Amount:</label>
+                  <span>Rs 2500.00</span>
+                </div>
+                <div>
+                  <label>Shipping Charges:</label>
+                  <span>Rs 200.00</span>
+                </div>
+                <div>
+                  <label>Net Amount:</label>
+                  <span>Rs 2700.00</span>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="add-order-item">
+              <legend><i class="fa fa-user fa-icon" aria-hidden="true"></i>Add Order Item</legend>
+              <div class="form-group col-md-2">
+                <label>Product Item</label>
+                <select class="form-control">
+                  <option>Select</option>
+                  <option>option 1</option>
+                  <option>option 2</option>
+                  <option>option 3</option>
+                  <option>option 4</option>
+                  <option>option 5</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label>Attribute</label>
+                <select class="form-control">
+                  <option>Select</option>
+                  <option>option 1</option>
+                  <option>option 2</option>
+                  <option>option 3</option>
+                  <option>option 4</option>
+                  <option>option 5</option>
+                </select>
+              </div>
+              <div class="form-group col-md-1">
+                <label>Quantity</label>
+                <input type="number" name="quantity" min="1" class="form-control">
+              </div>
+              <div class="form-group col-md-1">
+                <label>Rate</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group col-md-2">
+                <label>Amount</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group col-md-1">
+                <label>Shp chrg.</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group col-md-2">
+                <label>Total</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-1">
+                <label>Action</label>
+                <button type="button" class="btn btn-info">Add</button>
+              </div>
+            </fieldset>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">{{ addEditSubmitButton }}</button>
+                <button type="button" ui-sref="orders" class="btn btn-default">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+</div>

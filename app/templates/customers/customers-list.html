@@ -1,0 +1,78 @@
+<div class="content-wrapper manage-page">
+	<section class="content-header main-header-banner">
+		<h1>Customers</h1>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box data-list-box">
+					<div class="add-button" ui-sref="add-edit-customer({customerId: 'add'})">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body list-table">
+						<table id="customersList" class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>Customer Name</th>
+									<th>Member Status</th>
+									<th>Address</th>
+									<th>City</th>
+									<th>State</th>
+									<th>Country</th>
+									<th>Phone</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="x in dummyData">
+									<td>Tanuj</td>
+									<td>Active</td>
+									<td>Mandi Adampur</td>
+									<td>Hisar</td>
+									<td>Haryana</td>
+									<td>India</td>
+									<td>8929540002</td>
+									<td>
+										<div layout="row">
+											<a ui-sref="add-edit-customer({customerId: $index })" data-toggle="tooltip" title="Edit Customer!" data-placement="bottom" class="datatable-action">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
+											<a href="javascript:;" data-toggle="confirmation" title="Remove Customer" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr ng-repeat="y in dummyData">
+									<td>Shubham</td>
+									<td>Non-member</td>
+									<td>Sector 71</td>
+									<td>Mohali</td>
+									<td>Punjab</td>
+									<td>India</td>
+									<td>9068024918</td>
+									<td>
+										<div layout="row">
+											<a ui-sref="add-edit-customer({customerId: $index })" data-toggle="tooltip" title="Edit Customer!" data-placement="bottom" class="datatable-action">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
+											<a href="javascript:;" data-toggle="confirmation" title="Remove Customer" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.box-body -->
+				</div>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+</div>

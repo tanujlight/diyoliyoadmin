@@ -1,0 +1,84 @@
+<div class="content-wrapper manage-page">
+	<section class="content-header main-header-banner">
+		<h1>Orders</h1>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box data-list-box">
+					<div class="add-button" ui-sref="add-edit-order({orderId: 'add'})">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body list-table table-responsive">
+						<table id="ordersList" class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>Order Id</th>
+									<th>Order Date</th>
+									<th>Customer</th>
+									<th>Product</th>
+									<th>Order Total</th>
+									<th>Shipping Charges</th>
+									<th>Grand Total</th>
+									<th>Status</th>
+									<th>Member Status</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="x in dummyData">
+									<td>{{ $index +1 }}</td>
+									<td>10/12/2017</td>
+									<td>Tanuj</td>
+									<td>DELISH 2500</td>
+									<td>Rs 980.00</td>
+									<td>Rs 20.00</td>
+									<td>Rs 1000.00</td>
+									<td>Pending</td>
+									<td>Active</td>
+									<td>
+										<div layout="row">
+											<a ui-sref="add-edit-order({orderId: $index})" data-toggle="tooltip" title="Edit Order!" data-placement="bottom" class="datatable-action">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
+											<a href="javascript:;" data-toggle="confirmation" title="Remove Order" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr ng-repeat="y in dummyData">
+									<td>{{ $index + 6 }}</td>
+									<td>8/11/2017</td>
+									<td>Shubham</td>
+									<td>DELISH 5000</td>
+									<td>Rs 1980.00</td>
+									<td>Rs 40.00</td>
+									<td>Rs 2020.00</td>
+									<td>Delivered</td>
+									<td>Active</td>
+									<td>
+										<div layout="row">
+											<a ui-sref="add-edit-order({orderId: $index})" data-toggle="tooltip" title="Edit Order!" data-placement="bottom" class="datatable-action">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
+											<a href="javascript:;" data-toggle="confirmation" title="Remove Order" data-content="Are you sure?" data-placement="left" data-popout="true" data-singleton="true" class="datatable-action remove-icon">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.box-body -->
+				</div>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+</div>

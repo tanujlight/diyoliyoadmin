@@ -103,7 +103,7 @@ a {
 }
 
 .main-header .sidebar-toggle {
-	padding: 10px 15px;
+	padding: 15px 15px;
 }
 
 /* header media quires */
@@ -555,4 +555,25 @@ fieldset select {
     z-index: 1;
     width: 100%;
     height: 100%;
+}
+
+.add-order-page .add-order-item .form-group {
+	padding: 0px 5px 0 0;
+}
+
+.add-order-page .billing-amount {
+	text-align: right;
+}
+
+.add-order-page .billing-amount label {
+	display: inline-block;
+	text-align: right;
+	width: 200px;
+}
+
+.add-order-page .billing-amount span {
+	display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    min-width: 80px;
 }

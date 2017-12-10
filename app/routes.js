@@ -154,6 +154,81 @@
             }
         })
 
+        // module 3 Customers
+        .state("customers", {
+            url: '/customers',
+            views: {
+                "content@": {
+                    templateUrl: 'app/templates/customers/customers-list.html',
+                    controller: 'customersList'
+                },
+
+                "header@": {
+                    templateUrl: 'app/templates/common/header.html'
+                },
+
+                "sidebar@": {
+                    templateUrl: 'app/templates/common/sidebar.html'
+                }
+            }
+        })
+
+        .state("add-edit-customer", {
+            url: '/customer/:customerId',
+            views: {
+                "content@": {
+                    templateUrl: 'app/templates/customers/add-edit-customer.html',
+                    controller: 'addEditCustomer'
+                },
+
+                "header@": {
+                    templateUrl: 'app/templates/common/header.html'
+                },
+
+                "sidebar@": {
+                    templateUrl: 'app/templates/common/sidebar.html'
+                }
+            }
+        })
+
+
+        // module 4 Orders 
+        .state("orders", {
+            url: '/orders',
+            views: {
+                "content@": {
+                    templateUrl: 'app/templates/orders/orders-list.html',
+                    controller: 'ordersList'
+                },
+
+                "header@": {
+                    templateUrl: 'app/templates/common/header.html'
+                },
+
+                "sidebar@": {
+                    templateUrl: 'app/templates/common/sidebar.html'
+                }
+            }
+        })
+
+        .state("add-edit-order", {
+            url: '/order/:orderId',
+            views: {
+                "content@": {
+                    templateUrl: 'app/templates/orders/add-edit-order.html',
+                    controller: 'addEditOrder'
+                },
+
+                "header@": {
+                    templateUrl: 'app/templates/common/header.html'
+                },
+
+                "sidebar@": {
+                    templateUrl: 'app/templates/common/sidebar.html'
+                }
+            }
+        })
+
         // .state("admin", {
         //     url: '/admin',
         //     views: {
